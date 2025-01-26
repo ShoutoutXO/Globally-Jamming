@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 804269217171526084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.73, y: -1.1, z: 0}
-  m_LocalScale: {x: 0.625, y: 0.2625, z: 1}
+  m_LocalPosition: {x: -7.8237, y: -1.201, z: 0}
+  m_LocalScale: {x: 0.51214653, y: 0.5353656, z: 1.2052044}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 19d2555f1583fd34ea7317f57aba5da7, type: 3}
+  m_Sprite: {fileID: 4698443517844014737, guid: 3714293abe9bf8540a9294adfd06a68b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dabca49bb97afab48afda4bcc346d6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 2132386530429495319, guid: 464cd919db685a644bdad83576c9ace8, type: 3}
-  pointB: {fileID: 6309561188115995045, guid: 5d3da2313fed5d0468697426dc2d198f, type: 3}
+  pointA: {fileID: 6044305737602287647, guid: 464cd919db685a644bdad83576c9ace8, type: 3}
+  pointB: {fileID: 5064488847762991065, guid: 5d3da2313fed5d0468697426dc2d198f, type: 3}
   speed: 3
 --- !u!50 &5482536489305886386
 Rigidbody2D:
@@ -170,7 +170,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.66, y: 0.74}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
