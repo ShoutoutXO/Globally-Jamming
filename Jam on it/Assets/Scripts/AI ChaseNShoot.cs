@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AIChaseNShoot : MonoBehaviour
 {
@@ -98,5 +99,14 @@ public class AIChaseNShoot : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, fireRange);
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Check if the player collided with the trigger
+        if (collision.CompareTag("Player"))
+        {
+            // Reload the current scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
