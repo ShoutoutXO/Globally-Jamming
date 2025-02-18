@@ -15,6 +15,7 @@ public class AIChaseNShoot : MonoBehaviour
     private Transform player; // Reference to the player
     private bool canShoot = true; // Shooting cooldown
     private bool isFacingRight = true; // Track the facing direction
+    public Vector3 teleportPosition;
 
     void Start()
     {
@@ -100,13 +101,14 @@ public class AIChaseNShoot : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, fireRange);
     }
-    public void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the player collided with the trigger
-        if (collision.CompareTag("Player"))
+        // Check if the object colliding is the player
+        if (other.CompareTag("Player"))
         {
-            // Reload the current scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // Teleport the player to the defined position
+            other.transform.position = teleportPosition;
         }
     }
 }

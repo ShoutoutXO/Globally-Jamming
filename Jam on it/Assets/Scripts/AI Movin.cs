@@ -9,6 +9,8 @@ public class AIMovin : MonoBehaviour
     private Transform currentPoint; // Target point
     private Rigidbody2D rb; // Rigidbody2D component
     private bool isFacingRight = true; // Track the facing direction of the sprite
+    public Vector3 teleportPosition;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Initialize Rigidbody2D
@@ -33,13 +35,13 @@ public class AIMovin : MonoBehaviour
             FlipSprite(direction.x);
         }
     }
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the player collided with the trigger
-        if (collision.CompareTag("Player"))
+        // Check if the object colliding is the player
+        if (other.CompareTag("Player"))
         {
-            // Reload the current scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // Teleport the player to the defined position
+            other.transform.position = teleportPosition;
         }
     }
 

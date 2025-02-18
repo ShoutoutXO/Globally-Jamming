@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -24,5 +25,15 @@ public class Bullet : MonoBehaviour
 
         // Destroy the bullet after 'lifetime' seconds
         Destroy(gameObject, lifetime);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Check if the player collided with the trigger
+        if (collision.CompareTag("Player"))
+        {
+            // Reload the current scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
