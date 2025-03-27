@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1402383373277099347, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: d6ded422e8cf7c842a869f32253a2bec, type: 2}
+    - target: {fileID: 1402383373277099347, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3297922474110862655, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7499999
@@ -60,8 +68,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadBubble (19) Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8187741776791109747, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6319805064373739632, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3743496967589870234, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7077974302374867141}
   m_SourcePrefab: {fileID: 100100000, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+--- !u!1 &8251887269877337925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743496967589870234, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+  m_PrefabInstance: {fileID: 4717245079422072287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7077974302374867141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251887269877337925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa886f9e8f9ccc648a24f6e25c0469f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bubble: {fileID: 8251887269877337925}
+  destructionDelay: 1

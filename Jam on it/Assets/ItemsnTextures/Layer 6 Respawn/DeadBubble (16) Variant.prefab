@@ -11,14 +11,18 @@ PrefabInstance:
     - target: {fileID: 1402383373277099347, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: ecab22178f7713a47b55e4b49956f239, type: 2}
+      objectReference: {fileID: 6200000, guid: af9c5ccb313fb4b4abb1a725e176454d, type: 2}
+    - target: {fileID: 1402383373277099347, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3297922474110862655, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2416095
+      value: 1.7499999
       objectReference: {fileID: 0}
     - target: {fileID: 3297922474110862655, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 3297922474110862655, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,8 +68,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadBubble (16) Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8187741776791109747, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6319805064373739632, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3743496967589870234, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8500682617227261992}
   m_SourcePrefab: {fileID: 100100000, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+--- !u!1 &182295999699423426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743496967589870234, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+  m_PrefabInstance: {fileID: 3563534324839819864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8500682617227261992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182295999699423426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa886f9e8f9ccc648a24f6e25c0469f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bubble: {fileID: 182295999699423426}
+  destructionDelay: 1

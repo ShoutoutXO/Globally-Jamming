@@ -11,7 +11,11 @@ PrefabInstance:
     - target: {fileID: 1402383373277099347, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 2f61de3a5c74f03459e16645669f8ad9, type: 2}
+      objectReference: {fileID: 6200000, guid: af9c5ccb313fb4b4abb1a725e176454d, type: 2}
+    - target: {fileID: 1402383373277099347, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3297922474110862655, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7499999
@@ -64,8 +68,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeadBubble (17) Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8187741776791109747, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6319805064373739632, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3743496967589870234, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8683215705759069618}
   m_SourcePrefab: {fileID: 100100000, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+--- !u!1 &2998476539270416245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743496967589870234, guid: c7be651b6e5232249af0f8c9569f4b40, type: 3}
+  m_PrefabInstance: {fileID: 1904785349267979759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8683215705759069618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998476539270416245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa886f9e8f9ccc648a24f6e25c0469f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bubble: {fileID: 2998476539270416245}
+  destructionDelay: 1

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8695265500526915574}
   - component: {fileID: 4221161956738944941}
   - component: {fileID: 8976608509821367194}
-  - component: {fileID: 3859423724456632406}
+  - component: {fileID: 2386194571178343237}
   m_Layer: 3
   m_Name: BubbleBullet 1
   m_TagString: Untagged
@@ -115,7 +115,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &8976608509821367194
 CircleCollider2D:
@@ -151,9 +151,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &3859423724456632406
+  m_Offset: {x: 0.005295541, y: 0.0017649597}
+  m_Radius: 0.8001201
+--- !u!114 &2386194571178343237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 763635671957554569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3422b086214a7f04ab584bcad7dc0c8f, type: 3}
+  m_Script: {fileID: 11500000, guid: d766f1f4be4fa0f4c81ab2cea84c4372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifetime: 6.36
+  targetSize: {x: -17.172, y: -4.3516, z: 0}
+  growSpeed: 1
+  bulletSpeed: 5
+  delayBeforeShoot: 1
+  teleportPosition: {x: 7.23, y: 358.36, z: 0}

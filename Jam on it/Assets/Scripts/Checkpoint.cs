@@ -1,21 +1,27 @@
 using UnityEngine;
+using System.Collections; // Required for coroutines
 
 public class Checkpoint : MonoBehaviour
 {
-    public GameObject itemToEnable; // Assign this manually in the Inspector
+    [SerializeField] private GameObject itemToEnable; // SerializeField makes it visible in the Inspector but keeps it private
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the collider that triggered the event has the "Player" tag
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && itemToEnable != null)
         {
-            // If the itemToEnable is assigned and not null
-            if (itemToEnable != null)
-            {
-                // Enable the item in the Hierarchy
-                itemToEnable.SetActive(true);
-            }
-      
+            StartCoroutine(EnableItemWithDelay()); // Uses a coroutine for WebGL physics update issues
+        }
+    }
+
+    private IEnumerator EnableItemWithDelay()
+    {
+        yield return new WaitForSeconds(0.1f); // Small delay to ensure proper physics update
+        itemToEnable.SetActive(true);
+
+        // Enable collider if it exists
+        if (itemToEnable.TryGetComponent(out Collider2D itemCollider))
+        {
+            itemCollider.enabled = true;
         }
     }
 }
