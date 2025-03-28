@@ -11,6 +11,7 @@ public class AIChaseNShoot : MonoBehaviour
     public GameObject bulletPrefab; // Bullet prefab
     public Transform firePoint; // Bullet firing point
     public Vector3 teleportPosition; // Position to teleport player to
+    public Vector3 enemyTeleportPosition; // Teleport the enemy also
 
     private Transform player;
     private bool canShoot = true;
@@ -127,7 +128,9 @@ public class AIChaseNShoot : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position = teleportPosition; // Teleport player but do NOT destroy AI
+            other.transform.position = teleportPosition;
+
+            transform.position = enemyTeleportPosition;
         }
     }
 }
